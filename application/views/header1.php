@@ -31,7 +31,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?=PUBLIC_URL?>css/reset.css">
-    <link rel="stylesheet" href="<?=PUBLIC_URL?>css/indexstyle1.css">
+    <link rel="stylesheet" href="<?=PUBLIC_URL?>css/archivestyle.css">
 
 
     <script type="text/javascript">var base_url = "<?= BASE_URL?>";</script>
@@ -69,8 +69,21 @@
 			<div id="nav">
 				<ul>
 					<li><a class="active" href="javascript:void();">ವಿವೇಕಪ್ರಭ</a></li>
-					<li><a href="">ಧ್ಯೇಯ </a></li>
+					<li><a href="javascript:void();">ಧ್ಯೇಯ </a></li>
 					<li><a href="<?=BASE_URL . "listing/volumes"?>">ಹಿಂದಿನ ಸಂಚಿಕೆಗಳು</a></li>
 				</ul>
 			</div>
-		</div>
+		</div> 
+		<div class="body">
+			<div class="column1">
+				<div class="subnav">
+					<ul>
+						<li><a href="javascript:void();">ಲೇಖನಗಳು</a></li>
+						<li>|</li>
+						<li><a href="javascript:void();">ಲೇಖಕರು</a></li>
+						<li>|</li>
+						<li><a class="active" href="javascript:void();">ಸಂಪುಟಗಳು</a></li>
+						<li>|</li>
+						<li><a href="javascript:void();">ಸ್ಥಿರ ಶೀರ್ಷಿಕೆ </a></li>
+					</ul>
+				</div>
