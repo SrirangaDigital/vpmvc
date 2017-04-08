@@ -62,17 +62,73 @@ class Database extends PDO {
 
 		// Take list of keys as in schema and data
 	    $keys = implode(', ', array_keys($data));
+	    
 	    // form unnamed placeholders with count number of ? marks
 	    $bindValues =  str_repeat('?, ', count($data) - 1) . ' ?';
 	    $sth = $dbh->prepare('INSERT INTO ' . $table . ' (' . $keys .') VALUES (' . $bindValues . ')');
-
 		$sth->execute(array_values($data));
-		
 		return $dbh->lastInsertId();
 		
 	}
 	
-	public function getAuthorID($table, $dbh, $authDetails){
+	public function getVolumes() {
+		
+		$dbh = $this->connect(DB_NAME);
+		$data = array();
+		$sth = $dbh->prepare('SELECT distinct volume, year FROM ' . METADATA_TABLE_L2 . ' ORDER BY volume');
+		$sth->execute();
+	
+		while($result = $sth->fetch(PDO::FETCH_OBJ)) {
+			
+			array_push($data, $result);
+		}
+		
+		return $data;
+	}
+	
+	public function getIssues($volume, $year){
+		
+		$dbh = $this->connect(DB_NAME);
+		if(is_null($dbh))return null;
+		
+		$sth = $dbh->prepare('SELECT distinct issue, month, volume, year FROM ' . METADATA_TABLE_L2 . ' WHERE volume = ? AND year = ? ORDER BY issue');
+		$sth->execute(array($volume, $year));
+		$data = array();
+		
+		while($result = $sth->fetch(PDO::FETCH_OBJ)) {
+			
+			array_push($data, $result);
+		}
+		$dbh = null;
+		return $data;
+	}
+	
+	public function getTOC($volume, $issue, $year, $month, $table){
+		
+		$data = array();
+		$dbh = $this->connect(DB_NAME);
+		if(is_null($dbh))return null;
+		
+		$sth = $dbh->prepare('SELECT * FROM ' . $table . ' WHERE volume = ? and issue = ?');
+		$sth->execute(array($volume, $issue));
+		
+		while($result = $sth->fetch(PDO::FETCH_OBJ)) {
+			
+			$result->authorDetails = $this->getAuthorID($dbh, $result->authid);
+			array_push($data, $result);
+		}
+		
+		return $data;
+	}
+	
+	public function getAuthorID($dbh, $authid){
+		
+		$sth = $dbh->prepare('SELECT * FROM ' . METADATA_TABLE_L1 . ' WHERE authid = ?');
+		$sth->execute(array($authid));
+		return $sth->fetch(PDO::FETCH_ASSOC);
+	}
+	
+	public function authorID($table, $dbh, $authDetails){
 		
 		$authID = '';
 		$sth = $dbh->prepare('SELECT * FROM ' . $table . ' WHERE authorname = :authname AND salutation = :salut');
@@ -80,15 +136,17 @@ class Database extends PDO {
 		$sth->bindParam(':salut', $authDetails['salutation']);
 		$sth->execute();
 			
-		if($sth->rowCount() == 0)
-		{
+		if($sth->rowCount() == 0){
+			
 			$authID = $this->insertData($table, $dbh, $authDetails);
 		}
-		else
-		{
+		
+		else {
+			
 			$data = $sth->fetch(PDO::FETCH_ASSOC);
 			$authID = $data['authid'];
 		}
+		
 		return $authID;
 	}
 	
@@ -104,6 +162,58 @@ class Database extends PDO {
 		return $db;
 	}
 	
+	public function getLatestIssueDetails($table,$dbh) {
+		
+		$data = array();
+		
+		$sth = $dbh->prepare('SELECT DISTINCT volume, issue FROM ' . $table .' ORDER BY volume DESC, issue DESC LIMIT 1');
+		$sth->execute();
+		$data = $sth->fetch(PDO::FETCH_ASSOC);
+		
+		
+		$features = explode("|", FEATURE);
+		foreach($features as $feature)
+		{
+			$sth = $dbh->prepare('SELECT * FROM ' . $table .' WHERE volume = ' . $data['volume'] . ' AND issue = ' . $data['issue'] . ' AND feature = \'' . $feature . '\' LIMIT 1');
+			$sth->execute();
+			
+			if($sth->rowCount() ==1)
+			$details[$feature] = $sth->fetch(PDO::FETCH_ASSOC);
+			else
+			$details[$feature] = $sth->fetchAll(PDO::FETCH_ASSOC);
+		}
+		return$details;
+	}
+	
+	public function articleDetails($articleID, $articleTable, $testOcrTable, $dbh) {
+		
+		$sth = $dbh->prepare('SELECT * FROM ' . $articleTable . ' WHERE ID = :id');
+		$sth->bindParam(':id', $articleID);
+		$sth->execute();
+		
+		$row =  $sth->fetch(PDO::FETCH_ASSOC);
+		$volume = $row['volume'];
+		$issue = $row['issue'];
+		
+		list($pageStart , $pageEnd) = split("-",$row['page']);
+		$sth = $dbh->prepare('SELECT cur_page FROM ' . $testOcrTable . ' WHERE volume = :vol AND issue = :inum AND cur_page BETWEEN :pageStart AND :pageEnd');
+		$sth->bindParam(':vol', $volume);
+		$sth->bindParam(':inum', $issue);
+		$sth->bindParam(':pageStart', $pageStart);
+		$sth->bindParam(':pageEnd', $pageEnd);
+		$sth->execute();
+		$page = array();
+		
+		while($column = $sth->fetch(PDO::FETCH_ASSOC))
+		{
+			array_push($page, $column['cur_page']);
+		}
+		$row['page'] = $page;
+		var_dump($row);exit;
+		
+		
+		
+	}
 }
 
 ?>

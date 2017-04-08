@@ -4,7 +4,7 @@
     <!-- Basic Page Needs
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta charset="utf-8">
-    <title><?php if($pageTitle) echo $pageTitle . ' | '; ?>Viveka Prabha</title>
+    <title><?php if($pageTitle) echo $pageTitle . ' | '; ?>ವಿವೇಕಪ್ರಭ</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -31,7 +31,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?=PUBLIC_URL?>css/reset.css">
-    <link rel="stylesheet" href="<?=PUBLIC_URL?>css/indexstyle1.css">
+    <link rel="stylesheet" href="<?=PUBLIC_URL?>css/archivestyle.css">
 
 
     <script type="text/javascript">var base_url = "<?= BASE_URL?>";</script>
@@ -42,35 +42,48 @@
 <body>
 
     <div class="page">
-	<div class="header">
-		<div class="logo">
-			<img class="logo_img" src="<?=PUBLIC_URL?>images/Logo.jpg" alt="Logo" title="Logo"/>
-		</div>
-		<div class="title">
-			ವಿವೇಕಪ್ರಭ
-		</div>
-		<div class="toptitle">
-			ಶ್ರೀರಾಮಕೃಷ್ಣ ಆಶ್ರಮ, ಮೈಸೂರು
-		</div>
-		<div class="subtitle">
-			ರಾಮಕೃಷ್ಣ ಮಹಾಸಂಘದ ಏಕೈಕ ಕನ್ನಡ ಮಾಸಪತ್ರಿಕೆ
-		</div>
-		<div id="headnav">
-			<ul>
-				<li><a href="javascript:void();">Font Help</a></li>
-				<li>|</li>
-				<li><a href="javascript:void();">Site Map</a></li>
-				<li>|</li>
-				<li><a href="javascript:void();">Register</a></li>
-				<li>|</li>				
-				<li><a href="javascript:void();">Contact us</a></li>				
-			</ul>
-		</div>
-		<div id="nav">
-			<ul>
-				<li><a class="active" href="javascript:void();">ವಿವೇಕಪ್ರಭ</a></li>
-				<li><a href="html/dhyeya.php">ಧ್ಯೇಯ </a></li>
-				<li><a href="html/volumes.php">ಹಿಂದಿನ ಸಂಚಿಕೆಗಳು</a></li>
-			</ul>
-		</div>
-	</div>
+		<div class="header">
+			<div class="logo">
+				<img class="logo_img" src="<?=PUBLIC_URL?>images/Logo.jpg" alt="Logo" title="Logo"/>
+			</div>
+			<div class="title">
+				ವಿವೇಕಪ್ರಭ
+			</div>
+			<div class="toptitle">
+				ಶ್ರೀರಾಮಕೃಷ್ಣ ಆಶ್ರಮ, ಮೈಸೂರು
+			</div>
+			<div class="subtitle">
+				ರಾಮಕೃಷ್ಣ ಮಹಾಸಂಘದ ಏಕೈಕ ಕನ್ನಡ ಮಾಸಪತ್ರಿಕೆ
+			</div>
+			<div id="headnav">
+				<ul>
+					<li><a href="javascript:void();">Font Help</a></li>
+					<li>|</li>
+					<li><a href="javascript:void();">Site Map</a></li>
+					<li>|</li>
+					<li><a href="javascript:void();">Register</a></li>
+					<li>|</li>				
+					<li><a href="javascript:void();">Contact us</a></li>				
+				</ul>
+			</div>
+			<div id="nav">
+				<ul>
+					<li><a class="active" href="javascript:void();">ವಿವೇಕಪ್ರಭ</a></li>
+					<li><a href="html/dhyeya.php">ಧ್ಯೇಯ </a></li>
+					<li><a href="html/volumes.php">ಹಿಂದಿನ ಸಂಚಿಕೆಗಳು</a></li>
+				</ul>
+			</div>
+		</div> 
+		<div class="body">
+			<div class="column1">
+				<div class="subnav">
+					<ul>
+						<li><a href="articles.php">ಲೇಖನಗಳು</a></li>
+						<li>|</li>
+						<li><a href="authors.php">ಲೇಖಕರು</a></li>
+						<li>|</li>
+						<li><a class="active" href="volumes.php">ಸಂಪುಟಗಳು</a></li>
+						<li>|</li>
+						<li><a href="features.php">ಸ್ಥಿರ ಶೀರ್ಷಿಕೆ </a></li>
+					</ul>
+				</div>

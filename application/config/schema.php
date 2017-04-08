@@ -18,8 +18,17 @@ define('METADATA_TABLE_L2_SCHEMA', 'CREATE TABLE `' . METADATA_TABLE_L2 . '` (
   `year` varchar(50),
   `month` varchar(250),
   `issue` varchar(5),
-  `page` int(5)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4');
+  `page` varchar(20),
+  `ID` int(10) AUTO_INCREMENT,
+  PRIMARY KEY (`ID`)
+	) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4');
+	
+define('METADATA_TABLE_L3_SCHEMA', 'CREATE TABLE `' . METADATA_TABLE_L3 . '` (
+  `volume` varchar(50) NOT NULL,
+  `issue` varchar(50) NOT NULL,
+  `cur_page` varchar(50),
+  `text` varchar(50))
+  ENGINE=MyISAM DEFAULT CHARSET=utf8mb4');
 
 define('CHAR_ENCODING_SCHEMA', 'SET NAMES utf8mb4');
 

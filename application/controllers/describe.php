@@ -9,15 +9,13 @@ class describe extends Controller {
 
 	public function index() {
 
-		$this->photo();
 	}
 
-	public function archive($albumID = DEFAULT_ALBUM, $id = '') {
-
-		$data = $this->model->getArchiveDetails($albumID, $id);
-		$data->neighbours = $this->model->getNeighbourhood($id);
+	public function issue($volume, $issue, $year, $month) {
 		
-		($data) ? $this->view('describe/archive', $data) : $this->view('error/index');
+		$data = $this->model->db->getTOC($volume, $issue, $year, $month, METADATA_TABLE_L2);
+		
+		($data) ? $this->view('describe/issue', $data) : $this->view('error/index');
 	}
 }
 

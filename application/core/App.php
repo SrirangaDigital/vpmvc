@@ -50,7 +50,7 @@ class App{
 		}
 		else{
 			// If url does not have any parameters, then it is assumed that it will be the home page and hence 'Home' is returned 
-			return array('Home');
+			return array('data', 'getData');
 		}
 	}
 

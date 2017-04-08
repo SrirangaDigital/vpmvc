@@ -2,9 +2,8 @@
 
 class View {
 
-    public $monthNames = array("00" => "","01" => "January","02" => "February","03" => "March","04" => "April","05" => "May","06" => "June","07" => "July","08" => "August","09" => "September","10" => "October","11" => "November","12" => "December");
-    public $monthNamesShort = array("00" => "","01" => "Jan","02" => "Feb","03" => "Mar","04" => "Apr","05" => "May","06" => "Jun","07" => "Jul","08" => "Aug","09" => "Sep","10" => "Oct","11" => "Nov","12" => "Dec");
- 
+    public $monthNames = array("01" => "ಜನವರಿ", "02" => "ಫೆಬ್ರವರಿ", "03" => "ಮಾರ್ಚ್", "04" => "ಏಪ್ರಿಲ್", "05" => "ಮೇ", "06" => "ಜೂನ್", "07" => "ಜುಲೈ", "08" => "ಆಗಸ್ಟ್", "09" => "ಸೆಪ್ಟೆಂಬರ್", "10" => "ಅಕ್ಟೋಬರ್", "11" => "ನವೆಂಬರ್", "12" => "ಡಿಸೆಂಬರ್");
+     
 	public function __construct() {
 
 	}
@@ -76,11 +75,11 @@ class View {
 	}
 
 	public function showDynamicPage($data = array(), $path = '', $actualPath = '', $navigation = array()) {
-
+		
 		require_once 'application/views/viewHelper.php';
 		$viewHelper = new viewHelper();
 		$pageTitle = $this->getPageTitle($viewHelper, $path);
-
+		
 		require_once 'application/views/header.php';
 		
 		// if(preg_match('/flat\/Home/', $path)) require_once 'application/views/carousel.php';
@@ -180,22 +179,7 @@ class View {
 
     }
 
-    private function processNavPath($path) {
-
-        $path = preg_replace('/\/[0-9]+\-/', '/', $path);
-        $path = explode('/', $path);
-        $path = htmlentities(str_replace('_', ' ', $path[count($path) - 1]), ENT_COMPAT, "UTF-8");
-    	// Letters which are to be forced to lower-case need to handled below
-    	return preg_replace('/IASc/', 'IAS<span class="lower-case">c</span>', $path);
-    }
-
-    private function getNavLink($path) {
-
-        $path = preg_replace('/\/[0-9]+\-/', '/', $path);
-        return htmlentities(str_replace(PHY_FLAT_URL, BASE_URL, $path), ENT_COMPAT, "UTF-8");
-    }
-	
-	private function getPageTitle($viewHelper, $path) {
+  	private function getPageTitle($viewHelper, $path) {
 
 		if(preg_match('/flat/', $path)){
 

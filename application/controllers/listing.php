@@ -10,20 +10,20 @@ class listing extends Controller {
 
 	public function index() {
 
-		$this->albums();
 	}
+	
+	public function volumes() {
 
-	public function albums($defaultArchive = DEFAULT_ARCHIVE) {
-
-		$data = $this->model->listAlbums($defaultArchive);
-		($data) ? $this->view('listing/albums', $data) : $this->view('error/index');
+		$data = $this->model->listVolumes();
+		($data) ? $this->view('listing/volumes', $data) : $this->view('error/index');
 	}
+	
+	public function issue($volume, $year) {
 
-	public function archives($album = DEFAULT_ALBUM) {
-
-		$data = $this->model->listArchives($album);
-		($data) ? $this->view('listing/archives', $data) : $this->view('error/index');
+		$data = $this->model->listIssue($volume, $year);
+		($data) ? $this->view('listing/issue', $data) : $this->view('error/index');
 	}
+	
 }
 
 ?>

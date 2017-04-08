@@ -35,21 +35,6 @@ class article extends Controller {
 			$this->view('error/index');
 		}
 	}
-	
-	public function getLatestIssue(){
-
-		$dbh = $this->model->db->connect(DB_NAME);
-		if(is_null($dbh)){
-			echo "Not Connected to Database";
-			exit;
-		}
-		else
-		{
-			echo "SUresh Database connected";
-			exit;
-		}
-		
-	}
 }
 
 ?>
