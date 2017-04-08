@@ -209,10 +209,7 @@ class Database extends PDO {
 			array_push($page, $column['cur_page']);
 		}
 		$row['page'] = $page;
-		var_dump($row);exit;
-		
-		
-		
+		return $row;
 	}
 }
 
