@@ -5,7 +5,7 @@
 			<?php if($row->authid != ""): ?>
 				<span><?= $viewHelper->getAuthorDetails($row->authorDetails); ?></span>
 			<?php endif; ?>
-			<span class="downloadPdf">( <a href="<?=BASE_URL ?>download/article/<?= $row->ID?>" target="_blank">ಡೌನ್ಲೋಡ್ ಪಿಡಿಎಫ್</a> )</span>
+			<span class="downloadPdf">( <a href="<?=BASE_URL ?>article/download/<?= $row->ID?>" target="_blank">ಡೌನ್ಲೋಡ್ ಪಿಡಿಎಫ್</a> )</span>
 		<?php endforeach;?>
 	</div>
 </div>

@@ -35,6 +35,13 @@ class article extends Controller {
 			$this->view('error/index');
 		}
 	}
+	
+	public function download($articleID) {
+		
+		$dbh = $this->model->db->connect(DB_NAME);
+		$data = $this->model->db->articleDetails($articleID, METADATA_TABLE_L2 , METADATA_TABLE_L3, $dbh);
+		var_dump($data); exit;
+	}
 }
 
 ?>
