@@ -7,7 +7,7 @@ define('VOLUMES_URL', PUBLIC_URL . 'Volumes/');
 define('DJVU_URL', VOLUMES_URL . 'djvu/');
 define('PDF_URL', VOLUMES_URL . 'pdf/');
 define('XML_SRC_URL', BASE_URL . 'md-src/xml/');
-define('DOWNLOAD_URL', PUBLIC_URL . 'Downloads/');
+define('READWRITE_URL', PUBLIC_URL . 'ReadWrite/');
 define('FLAT_URL', BASE_URL . 'application/views/flat/');
 define('RESOURCES_URL', PUBLIC_URL . 'Resources/');
 
@@ -18,7 +18,7 @@ define('PHY_VOLUMES_URL', PHY_PUBLIC_URL . 'Volumes/');
 define('PHY_DJVU_URL', PHY_VOLUMES_URL . 'djvu/');
 define('PHY_PDF_URL', PHY_VOLUMES_URL . 'pdf/');
 define('PHY_XML_SRC_URL', PHY_BASE_URL . 'md-src/xml/');
-define('PHY_DOWNLOAD_URL', PHY_PUBLIC_URL . 'Downloads/');
+define('PHY_READWRITE_URL', PHY_PUBLIC_URL . 'ReadWrite/');
 define('PHY_ARCHIVES_URL', PHY_PUBLIC_URL . 'Archives/');
 define('PHY_TXT_URL', PHY_PUBLIC_URL . 'Text/');
 define('PHY_FLAT_URL', PHY_BASE_URL . 'application/views/flat/');
