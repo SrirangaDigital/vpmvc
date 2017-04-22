@@ -68,9 +68,9 @@
 			</div>
 			<div id="nav">
 				<ul>
-					<li><a class="active" href="javascript:void();">ವಿವೇಕಪ್ರಭ</a></li>
+					<li><a href="javascript:void();">ವಿವೇಕಪ್ರಭ</a></li>
 					<li><a href="javascript:void();">ಧ್ಯೇಯ </a></li>
-					<li><a href="<?=BASE_URL . "listing/volumes"?>">ಹಿಂದಿನ ಸಂಚಿಕೆಗಳು</a></li>
+					<li><a <?php if(preg_match('/listing\/volumes|/', $path) || preg_match('/listing\/issue|/', $path)): ?> class="active" href="javascript:void();" <?php else: ?> href="<?=BASE_URL . "listing/volumes"?>" <?php endif; ?>>ಹಿಂದಿನ ಸಂಚಿಕೆಗಳು </a></li>
 				</ul>
 			</div>
 		</div> 
@@ -82,8 +82,8 @@
 						<li>|</li>
 						<li><a href="javascript:void();">ಲೇಖಕರು</a></li>
 						<li>|</li>
-						<li><a class="active" href="javascript:void();">ಸಂಪುಟಗಳು</a></li>
+						<li><a <?php if(preg_match('/listing\/volumes/', $path) || preg_match('/listing\/issue|/', $path)): ?> class="active" href="javascript:void();" <?php else: ?> href="<?=BASE_URL . "listing/volumes"?>" <?php endif; ?>>ಸಂಪುಟಗಳು</a></li>
 						<li>|</li>
-						<li><a href="javascript:void();">ಸ್ಥಿರ ಶೀರ್ಷಿಕೆ </a></li>
+						<li><a  href="javascript:void();">ಸ್ಥಿರ ಶೀರ್ಷಿಕೆ </a></li>
 					</ul>
 				</div>

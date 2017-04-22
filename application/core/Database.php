@@ -211,6 +211,22 @@ class Database extends PDO {
 		$row['page'] = $page;
 		return $row;
 	}
+
+	public function getArticleList($character){
+
+		$dbh = $this->connect(DB_NAME);
+		$sth = $dbh->prepare('SELECT * FROM ' . METADATA_TABLE_L2 . ' WHERE title LIKE \'' . $character .  '%\' ORDER BY title');
+		$sth->execute();
+
+		$data = array();
+
+		while($result = $sth->fetch(PDO::FETCH_OBJ)) {
+			
+			$result->authorDetails = $this->getAuthorID($dbh, $result->authid);
+			array_push($data, $result);
+		}
+		return $data;	
+	}
 }
 
 ?>

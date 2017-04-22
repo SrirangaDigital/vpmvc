@@ -17,6 +17,11 @@ class listingModel extends Model {
 		
 		return $this->db->getIssues($volume, $year);
 	}
+
+	public function getArticles($character) {
+		
+		return $this->db->getArticleList($character);
+	}
 }
 
 ?>

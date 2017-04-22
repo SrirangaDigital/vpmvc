@@ -24,6 +24,12 @@ class listing extends Controller {
 		($data) ? $this->view('listing/issue', $data) : $this->view('error/index');
 	}
 	
+	public function articles($character = '') {
+
+		$data = $this->model->getArticles($character);
+		($data) ? $this->view('listing/articles', $data) : $this->view('error/index');
+	}
+	
 }
 
 ?>
