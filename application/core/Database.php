@@ -244,6 +244,20 @@ class Database extends PDO {
 		}
 		return $data;
 	}
+
+	public function getAuthorArticleList($authID){
+
+		$dbh = $this->connect(DB_NAME);
+		$sth = $dbh->prepare('SELECT * FROM ' . METADATA_TABLE_L2 . ' WHERE authid = ' . $authID . ' ORDER BY authid');
+		$sth->execute();
+
+		$data = array();
+
+		while($result = $sth->fetch(PDO::FETCH_OBJ)) 
+			array_push($data, $result);
+
+		return $data;
+	}
 }
 
 ?>

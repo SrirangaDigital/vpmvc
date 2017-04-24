@@ -35,9 +35,9 @@
 <ul>
 	<?php foreach($data as $row): ?>
 		<?php if($row->salutation == ''): ?>
-			<li><span class="authorspan"><a href="auth.php?authid=<?= $row->authid ?>"><?= $row->authorname; ?></a></span></li>
+			<li><span class="authorspan"><a href="<?= BASE_URL ?>describe/authorArticles/<?= $row->authid ?>"><?= $row->authorname; ?></a></span></li>
 		<?php else: ?>
-			<li><span class="authorspan"><a href="auth.php?authid=<?= $row->authid ?>"><?= $row->authorname?>, <?= $row->salutation ?></a></span></li>
+			<li><span class="authorspan"><a href="<?= BASE_URL ?>describe/authorArticles/<?= $row->authid ?>"><?= $row->authorname?>, <?= $row->salutation ?></a></span></li>
 		<?php endif; ?>
 	<?php endforeach;?>
 </ul>
