@@ -2,7 +2,7 @@
 	<div class="scroll">
 		<?php foreach($data as $row): ?>
 			<li><span class="titlespan"><a href="../Volumes/$volume/$issue/index.djvu?djvuopts&page=$page&zoom=page" target="_blank"><?= $row->title ?></a></span>
-			<?php if($row->authid != ""): ?>
+			<?php if($row->authid != 0): ?>
 				<span><?= $viewHelper->getAuthorDetails($row->authorDetails); ?></span>
 			<?php endif; ?>
 			<span class="downloadPdf">( <a href="<?=BASE_URL ?>article/download/<?= $row->ID?>" target="_blank">ಡೌನ್ಲೋಡ್ ಪಿಡಿಎಫ್</a> )</span>

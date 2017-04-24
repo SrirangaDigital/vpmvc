@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" href="css/skeleton.css"> -->
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="<?=PUBLIC_URL?>css/reset.css">
     <link rel="stylesheet" href="<?=PUBLIC_URL?>css/archivestyle.css">
 
@@ -78,11 +78,11 @@
 			<div class="column1">
 				<div class="subnav">
 					<ul>
-						<li><a href="javascript:void();">ಲೇಖನಗಳು</a></li>
+						<li><a href="<?= BASE_URL?>listing/articles">ಲೇಖನಗಳು</a></li>
 						<li>|</li>
 						<li><a href="javascript:void();">ಲೇಖಕರು</a></li>
 						<li>|</li>
-						<li><a <?php if(preg_match('/listing\/volumes/', $path) || preg_match('/listing\/issue|/', $path)): ?> class="active" href="javascript:void();" <?php else: ?> href="<?=BASE_URL . "listing/volumes"?>" <?php endif; ?>>ಸಂಪುಟಗಳು</a></li>
+						<li><a <?php if(preg_match('/listing\/volumes/', $path) || preg_match('/listing\/issue|/', $path)): ?> class="active" href="<?= BASE_URL?>listing/volumes" <?php else: ?> href="<?=BASE_URL . "listing/volumes"?>" <?php endif; ?>>ಸಂಪುಟಗಳು</a></li>
 						<li>|</li>
 						<li><a  href="javascript:void();">ಸ್ಥಿರ ಶೀರ್ಷಿಕೆ </a></li>
 					</ul>

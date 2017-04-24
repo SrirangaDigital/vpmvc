@@ -223,9 +223,10 @@ class Database extends PDO {
 		while($result = $sth->fetch(PDO::FETCH_OBJ)) {
 			
 			$result->authorDetails = $this->getAuthorID($dbh, $result->authid);
+			$result->character = $character;
 			array_push($data, $result);
 		}
-		return $data;	
+		return $data;
 	}
 }
 
