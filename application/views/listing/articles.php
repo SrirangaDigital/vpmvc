@@ -23,7 +23,6 @@
 	<span <?php if($data[0]->character == 'ಟ'): ?> class="searchletter" <?php else: ?>class="alphaspan"> <?php endif;?><a href="<?=BASE_URL ?>listing/articles/ಟ">&nbsp;ಟ</a>&nbsp;</span>
 	<span <?php if($data[0]->character == 'ಠ'): ?> class="searchletter" <?php else: ?>class="alphaspan"> <?php endif;?><a href="<?=BASE_URL ?>listing/articles/ಠ">&nbsp;ಠ</a>&nbsp;</span>
 	<span <?php if($data[0]->character == 'ತ'): ?> class="searchletter" <?php else: ?>class="alphaspan"> <?php endif;?><a href="<?=BASE_URL ?>listing/articles/ತ">&nbsp;ತ</a>&nbsp;</span>
-	<span <?php if($data[0]->character == 'ಥ'): ?> class="searchletter" <?php else: ?>class="alphaspan"> <?php endif;?><a href="<?=BASE_URL ?>listing/articles/ಥ">&nbsp;ಥ</a>&nbsp;</span>				
 	<span <?php if($data[0]->character == 'ದ'): ?> class="searchletter" <?php else: ?>class="alphaspan"> <?php endif;?><a href="<?=BASE_URL ?>listing/articles/ದ">&nbsp;ದ</a>&nbsp;</span>
 	<span <?php if($data[0]->character == 'ಧ'): ?> class="searchletter" <?php else: ?>class="alphaspan"> <?php endif;?><a href="<?=BASE_URL ?>listing/articles/ಧ">&nbsp;ಧ</a>&nbsp;</span>
 	<span <?php if($data[0]->character == 'ನ'): ?> class="searchletter" <?php else: ?>class="alphaspan"> <?php endif;?><a href="<?=BASE_URL ?>listing/articles/ನ">&nbsp;ನ</a>&nbsp;</span>
