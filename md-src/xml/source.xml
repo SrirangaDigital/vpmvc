@@ -30370,6 +30370,58 @@
 				<allauthors />
 			</entry>
 			<entry>
+				<title>ಶ್ರೀರಾಮಕೃಷ್ಣರ ನೆನಪುಗಳು</title>
+				<feature>ವಿಶೇಷ ಲೇಖನ</feature>
+				<text>ನನಗೆ ಎಂಟು ವರ್ಷ ವಯಸ್ಸಾಗಿದ್ದಾಗ ಒಮ್ಮೆ ಠಾಕೂರರು (ಶ್ರೀರಾಮಕೃಷ್ಣರು) ನಮ್ಮ ಮನೆಗೆ</text>
+				<page>0011-0013</page>
+				<allauthors>
+					<author salut="">ಭವತಾರಿಣೀ ದೇವಿ</author>
+				</allauthors>
+			</entry>
+			<entry>
+				<title>ಶ್ರೀಮಾತೆ ಭಾಗ-೩</title>
+				<feature>ಧಾರಾವಾಹಿ</feature>
+				<text>ಕೃಷ್ಣಲಾಲ್ ಒಬ್ಬನಿಗೇ ಯೋಗಿನ್ ಮಹಾರಾಜರ ಸೇವೆ ಮಾಡುವುದು ಸಾಧ್ಯವಾಗುತ್ತಿಲಿಲ್ಲ</text>
+				<page>0014-0017</page>
+				<allauthors>
+					<author salut="">ಆಶುತೋಷ್ ಮಿತ್ರ</author>
+				</allauthors>
+			</entry>
+			<entry>
+				<title>ಭಗವದ್ಗೀತೆಯ ಕೃಪೆ</title>
+				<feature>ವಿಶೇಷ ಲೇಖನ</feature>
+				<text>ಸ್ವಾಧ್ಯಾಯದಿಂದ ಇಷ್ಟದೇವತೆಯ ಸಾಕ್ಷಾತ್ಕಾರವಾಗುತ್ತದೆ ಸ್ವಾಧ್ಯಾಯ ಎಂದರೆ ಮಂತ್ರಜಪ</text>
+				<page>0018-0019</page>
+				<allauthors>
+					<author salut="">ಸುದರ್ಶನ ಸಿಂಹ ಚಕ್ರ</author>
+				</allauthors>
+			</entry>
+			<entry>
+				<title>ಶ್ರೀಮಾತೆಯವರ ಪತ್ರಗಳು - ೨</title>
+				<feature>ಧಾರಾವಾಹಿ</feature>
+				<text>ಶ್ರೀರಾಮಕೃಷ್ಣರು ಸದಾ ಆಧ್ಯಾತ್ಮಿಕತೆಯ ಉಚ್ಚ ಸ್ಥಿತಿಯಲ್ಲೇ ನೆಲೆಸಿರುತ್ತಿದ್ದರು</text>
+				<page>0020-0021</page>
+				<allauthors />
+			</entry>
+			<entry>
+				<title>ಕಳೆದ ದಿನಗಳ ನೆನಪುಗಳು-೪</title>
+				<feature>ಧಾರಾವಾಹಿ</feature>
+				<text>ಖಗೇನನು ಮಾಸ್ಟರ್ ಮಹಾಶಯರ ವಿಷಯವಾಗಿ ಕಂಡುಕೊಂಡ ಸಂಗತಿ ಹಾಗೂ ಅವರೊಂದಿಗೆ</text>
+				<page>0022-0026</page>
+				<allauthors>
+					<author salut="ಸ್ವಾಮಿ">ಶ್ರದ್ಧಾನಂದ</author>
+				</allauthors>
+			</entry>
+			<entry>
+				<title>ಚೈತನ್ಯ ದೇವನ ಭಕ್ತಿಮಾರ್ಗ</title>
+				<feature>ವಿಶೇಷ ಲೇಖನ</feature>
+				<text>ನಿಷ್ಠಾವಂತ ಭಕ್ತರ ಕಡೆ ನೋಡಿದಾಗ, ಅಂತಹ ವ್ಯಕ್ತಿಗಳು ತಮ್ಮ ಮನಸ್ಸಿನಲ್ಲಿ ಏನನ್ನು ಅರಸುತ್ತೀರು</text>
+				<page>0027-0031</page>
+				<allauthors>
+					<author salut="ಸ್ವಾಮಿ">ಅಶೋಕಾನಂದ</author>
+				</allauthors>
+			</entry>
+			<entry>
 				<title>ಜಲಾಲುದ್ದೀನ್ ರೂಮಿ - ಸೂಫಿ ಕವಿ</title>
 				<feature>ಸಂತರ ಜೀವನ</feature>
 				<text>ಜಲಾಲುದ್ದೀನ್ ರೂಮಿ ಸೂಫೀ ಸಂತರ ಮಧ್ಯೆ ಸೂರ್ಯನಂತೆ ಇದ್ದಾನೆ ಅವನಲ್ಲಿ ಒಬ್ಬ</text>
@@ -30406,57 +30458,103 @@
 				<page>0042-0042</page>
 				<allauthors />
 			</entry>
+		</issue>
+		<issue inum="04" month="04" year="2017" theme="">
 			<entry>
-				<title>ಶ್ರೀಮಾತೆ ಭಾಗ-೩</title>
+				<title>ಉಪನಿಷನ್ಮಾತೆ</title>
+				<feature>ಪ್ರಾರ್ಥನೆ</feature>
+				<text></text>
+				<page>0004-0004</page>
+				<allauthors />
+			</entry>
+			<entry>
+				<title>ನಾದಾಂತರಂಗ</title>
+				<feature>ಸಂಪಾದಕೀಯ</feature>
+				<text></text>
+				<page>0007-0009</page>
+				<allauthors />
+			</entry>
+			<entry>
+				<title>ದಾಸ್ಯಭಕ್ತಿ</title>
+				<feature>ಶ್ರೀರಾಮಕೃಷ್ಣ ವಚನವೇದದಿಂದ</feature>
+				<text>ಭಕ್ತನ ಭಾವ ಯಾವ ರೀತಿಯದು ಗೊತ್ತೆ? ಆತನ ಭಾವ</text>
+				<page>0010-0010</page>
+				<allauthors />
+			</entry>
+			<entry>
+				<title>ಮನಃಶಾಂತಿ</title>
+				<feature>ವಿಶೇಷ ಲೇಖನ</feature>
+				<text>ಬಹು ಜನರ ಬಯಕೆ ಯಾವುದಾದರೂ ಶಾಂತ, ಏಕಾಂತವಾದ ಸ್ಥಳಕ್ಕೆ ಹೋಗಿ ಕೆಲವು</text>
+				<page>0011-0015</page>
+				<allauthors>
+					<author salut="ಸ್ವಾಮಿ">ಮುಕ್ತಿರೂಪಾನಂದ</author>
+				</allauthors>
+			</entry>
+			<entry>
+				<title>ಚೈತನ್ಯ ದೇವನ ಭಕ್ತಿಮಾರ್ಗ-೨</title>
+				<feature>ವಿಶೇಷ ಲೇಖನ</feature>
+				<text>ಪ್ರತಿಮಾಪೂಜೆ ಎಂದರೆ ದೇವರನ್ನು ಒಂದು ವಿಗ್ರಹದಲ್ಲಿ ಪೂಜಿಸುವುದು</text>
+				<page>0016-0020</page>
+				<allauthors>
+					<author salut="ಸ್ವಾಮಿ">ಅಶೋಕಾನಂದ</author>
+				</allauthors>
+			</entry>
+			<entry>
+				<title>ಶ್ರೀಮಾತೆ ಭಾಗ-೪</title>
 				<feature>ಧಾರಾವಾಹಿ</feature>
-				<text>ಕೃಷ್ಣಲಾಲ್ ಒಬ್ಬನಿಗೇ ಯೋಗಿನ್ ಮಹಾರಾಜರ ಸೇವೆ ಮಾಡುವುದು ಸಾಧ್ಯವಾಗುತ್ತಿಲಿಲ್ಲ</text>
-				<page>0014-0017</page>
+				<text>ಒಂದು ದಿನ ಮಧ್ಯಾಹ್ನ ಶ್ರೀಮಾತೆ ತಮ್ಮ ಕೋಣೆಯಲ್ಲಿ ವಿಶ್ರಾಂತಿ ತೆಗೆದುಕೊಳ್ಳು ತ್ತಿದ್ದಾಗ ಮಾತುಕತೆ</text>
+				<page>0021-0024</page>
 				<allauthors>
 					<author salut="">ಆಶುತೋಷ್ ಮಿತ್ರ</author>
 				</allauthors>
 			</entry>
 			<entry>
-				<title>ಶ್ರೀಮಾತೆಯವರ ಪತ್ರಗಳು - ೨</title>
-				<feature>ಧಾರಾವಾಹಿ</feature>
-				<text>ಶ್ರೀರಾಮಕೃಷ್ಣರು ಸದಾ ಆಧ್ಯಾತ್ಮಿಕತೆಯ ಉಚ್ಚ ಸ್ಥಿತಿಯಲ್ಲೇ ನೆಲೆಸಿರುತ್ತಿದ್ದರು</text>
-				<page>0020-0021</page>
-				<allauthors />
+				<title>ನಿವೇದಿತಾ ದೃಷ್ಟಿಯಲ್ಲಿ ಶ್ರೀಮಾತೆ</title>
+				<feature>ವಿಶೇಷ ಲೇಖನ</feature>
+				<text>ಮಹಾನ್ ಯೋಗಿನಿ ಶ್ರೀಶಾರದಾಮಾತೆ ಆಧ್ಯಾತ್ಮಿಕ ಲೋಕದ ಧ್ರುವತಾರೆ; ಅಂತೆಯೇ ಲೌಕಿಕ</text>
+				<page>0025-0027</page>
+				<allauthors>
+					<author salut="ಡಾ">ಡಿ. ಕೆ. ರಾಜೇಂದ್ರ</author>
+				</allauthors>
 			</entry>
 			<entry>
-				<title>ಕಳೆದ ದಿನಗಳ ನೆನಪುಗಳು-೪</title>
+				<title>ಕಳೆದ ದಿನಗಳ ನೆನಪುಗಳು-೫</title>
 				<feature>ಧಾರಾವಾಹಿ</feature>
-				<text>ಖಗೇನನು ಮಾಸ್ಟರ್ ಮಹಾಶಯರ ವಿಷಯವಾಗಿ ಕಂಡುಕೊಂಡ ಸಂಗತಿ ಹಾಗೂ ಅವರೊಂದಿಗೆ</text>
-				<page>0022-0026</page>
+				<text>ನೆಲ ಅಂತಸ್ತು ಬಹಳ ಕಾಲದಿಂದ ವಾಸರಹಿತವಾಗಿದ್ದು,ಕಾಡು, ಗಿಡ, ಪೊದೆಗಳಿಂದ</text>
+				<page>0028-0031</page>
 				<allauthors>
 					<author salut="ಸ್ವಾಮಿ">ಶ್ರದ್ಧಾನಂದ</author>
 				</allauthors>
 			</entry>
 			<entry>
-				<title>ಶ್ರೀರಾಮಕೃಷ್ಣರ ನೆನಪುಗಳು</title>
-				<feature>ವಿಶೇಷ ಲೇಖನ</feature>
-				<text>ನನಗೆ ಎಂಟು ವರ್ಷ ವಯಸ್ಸಾಗಿದ್ದಾಗ ಒಮ್ಮೆ ಠಾಕೂರರು (ಶ್ರೀರಾಮಕೃಷ್ಣರು) ನಮ್ಮ ಮನೆಗೆ</text>
-				<page>0011-0013</page>
+				<title>ಸೌಂದರ್ಯಾಮೃತಮ್</title>
+				<feature>ಪುಸ್ತಕ ಪರಿಚಯ</feature>
+				<text>ಅನಾದಿ ಕಾಲದಿಂದ ಸಹಜವಾಗಿ ಸರಿಯುತ್ತ ಹರಿಯುತ್ತ ಸಾಗುತ್ತಿರುವ ಈ ಸಂಸಾರದ</text>
+				<page>0032-0032</page>
+				<allauthors />
+			</entry>
+			<entry>
+				<title>ಭಕ್ತಿ ಸೌಂದರ್ಯದ ಸುರೂಪಿ ಸುಂದರಮೂರ್ತಿ ನಾಯನಾರ್</title>
+				<feature>ಸಂತರ ಜೀವನ</feature>
+				<text>ದ್ರಾವಿಡ ದೇಶವನ್ನು ಭಕ್ತಿಯ ಉಗಮಸ್ಥಾನ ಎಂದು ಭಾಗವತವು ಬಣ್ಣಿಸುತ್ತದೆ</text>
+				<page>0033-0037</page>
 				<allauthors>
-					<author salut="">ಭವತಾರಿಣೀ ದೇವಿ</author>
+					<author salut="ಸ್ವಾಮಿ">ವೀರೇಶಾನಂದ</author>
 				</allauthors>
 			</entry>
 			<entry>
-				<title>ಭಗವದ್ಗೀತೆಯ ಕೃಪೆ</title>
-				<feature>ವಿಶೇಷ ಲೇಖನ</feature>
-				<text>ಸ್ವಾಧ್ಯಾಯದಿಂದ ಇಷ್ಟದೇವತೆಯ ಸಾಕ್ಷಾತ್ಕಾರವಾಗುತ್ತದೆ ಸ್ವಾಧ್ಯಾಯ ಎಂದರೆ ಮಂತ್ರಜಪ</text>
-				<page>0018-0019</page>
-				<allauthors>
-					<author salut="">ಸುದರ್ಶನ ಸಿಂಹ ಚಕ್ರ</author>
-				</allauthors>
+				<title>ಸೋದರಿ ನಿವೇದಿತಾ ಭಾ‌ಗ-೭</title>
+				<feature>ಚಿತ್ರಕಥೆ</feature>
+				<text>ಆ ಸಮಯದಲ್ಲಿ ವಂದೇ ಮಾತರಂ ಗೀತೆಯನ್ನು ಹಾಡುವುದನ್ನು ಸರ್ಕಾರ ನಿಷೇಧಿಸಿತ್ತು</text>
+				<page>0038-0041</page>
+				<allauthors />
 			</entry>
 			<entry>
-				<title>ಚೈತನ್ಯ ದೇವನ ಭಕ್ತಿಮಾರ್ಗ</title>
-				<feature>ವಿಶೇಷ ಲೇಖನ</feature>
-				<text>ನಿಷ್ಠಾವಂತ ಭಕ್ತರ ಕಡೆ ನೋಡಿದಾಗ, ಅಂತಹ ವ್ಯಕ್ತಿಗಳು ತಮ್ಮ ಮನಸ್ಸಿನಲ್ಲಿ ಏನನ್ನು ಅರಸುತ್ತೀರು</text>
-				<page>0027-0031</page>
-				<allauthors>
-					<author salut="ಸ್ವಾಮಿ">ಅಶೋಕಾನಂದ</author>
-				</allauthors>
+				<title>ಸುದ್ದಿಸಂಚಯ</title>
+				<feature></feature>
+				<text></text>
+				<page>0042-0042</page>
+				<allauthors />
 			</entry>
 		</issue>
 	</volume>
