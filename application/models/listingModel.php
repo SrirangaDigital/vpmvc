@@ -22,6 +22,11 @@ class listingModel extends Model {
 		
 		return $this->db->getArticleList($character);
 	}
+
+	public function getAuthors($character) {
+		
+		return $this->db->getAuthorsList($character);
+	}
 }
 
 ?>

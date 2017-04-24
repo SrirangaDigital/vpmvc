@@ -228,6 +228,22 @@ class Database extends PDO {
 		}
 		return $data;
 	}
+
+	public function getAuthorsList($character){
+
+		$dbh = $this->connect(DB_NAME);
+		$sth = $dbh->prepare('SELECT * FROM ' . METADATA_TABLE_L1 . ' WHERE authorname LIKE \'' . $character .  '%\' ORDER BY authorname');
+		$sth->execute();
+
+		$data = array();
+
+		while($result = $sth->fetch(PDO::FETCH_OBJ)) {
+			
+			$result->character = $character;
+			array_push($data, $result);
+		}
+		return $data;
+	}
 }
 
 ?>
