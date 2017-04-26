@@ -258,6 +258,35 @@ class Database extends PDO {
 
 		return $data;
 	}
+
+	public function getFeaturesList(){
+
+		$dbh = $this->connect(DB_NAME);
+		$sth = $dbh->prepare('SELECT DISTINCT feature FROM ' . METADATA_TABLE_L2 . ' WHERE feature != "" ORDER BY feature');
+		$sth->execute();
+
+		$data = array();
+
+		while($result = $sth->fetch(PDO::FETCH_OBJ)) 
+			array_push($data, $result);
+
+		return $data;
+	}
+
+	public function getFeatureArticleList($feature){
+
+		$dbh = $this->connect(DB_NAME);
+		$sth = $dbh->prepare('SELECT * FROM ' . METADATA_TABLE_L2 . ' WHERE feature = \'' . $feature . '\' ORDER BY title');
+		$sth->execute();
+
+		$data = array();
+
+		while($result = $sth->fetch(PDO::FETCH_OBJ)) 
+			array_push($data, $result);
+
+
+		return $data;
+	}
 }
 
 ?>

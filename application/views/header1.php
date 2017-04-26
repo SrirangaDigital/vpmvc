@@ -78,12 +78,12 @@
 			<div class="column1">
 				<div class="subnav">
 					<ul>
-						<li><a href="<?= BASE_URL?>listing/articles">ಲೇಖನಗಳು</a></li>
+						<li><a <?php if(preg_match('/listing\/articles/', $path)):?> class = "active" <?php endif; ?> href="<?= BASE_URL?>listing/articles">ಲೇಖನಗಳು</a></li>
 						<li>|</li>
 						<li><a <?php if(preg_match('/listing\/authors/', $path)):?> class = "active" <?php endif; ?> href="<?= BASE_URL?>listing/authors">ಲೇಖಕರು</a></li>
 						<li>|</li>
-						<li><a <?php if(preg_match('/listing\/volumes/', $path) || preg_match('/listing\/issue|/', $path)): ?> class="active" <?php endif; ?> href="<?=BASE_URL . "listing/volumes"?>" >ಸಂಪುಟಗಳು</a></li>
+						<li><a <?php if(preg_match('/listing\/volumes/', $path) || preg_match('/listing\/issue/', $path)): ?> class="active" <?php endif; ?> href="<?=BASE_URL . "listing/volumes"?>" >ಸಂಪುಟಗಳು</a></li>
 						<li>|</li>
-						<li><a  href="javascript:void();">ಸ್ಥಿರ ಶೀರ್ಷಿಕೆ </a></li>
+						<li><a <?php if(preg_match('/listing\/features/', $path)): ?> class = "active" <?php endif; ?> href="<?= BASE_URL?>listing/features">ಸ್ಥಿರ ಶೀರ್ಷಿಕೆ </a></li>
 					</ul>
 				</div>

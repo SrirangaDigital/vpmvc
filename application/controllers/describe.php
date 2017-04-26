@@ -22,6 +22,12 @@ class describe extends Controller {
 		$data = $this->model->db->getAuthorArticleList($authID);
 		($data) ? $this->view('describe/authorArticles', $data) : $this->view('error/index');
 	}
+
+	public function feature($feature) {
+
+		$data = $this->model->db->getFeatureArticleList($feature);
+		($data) ? $this->view('describe/featureArticles', $data) : $this->view('error/index');
+	}
 }
 
 ?>

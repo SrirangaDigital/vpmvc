@@ -35,6 +35,12 @@ class listing extends Controller {
 		$data = $this->model->getAuthors($character);
 		($data) ? $this->view('listing/authors', $data) : $this->view('error/index');
 	}
+
+	public function features() {
+
+		$data = $this->model->getFeatures();
+		($data) ? $this->view('listing/features', $data) : $this->view('error/index');
+	}
 	
 }
 
