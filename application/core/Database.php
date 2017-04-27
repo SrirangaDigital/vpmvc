@@ -281,8 +281,11 @@ class Database extends PDO {
 
 		$data = array();
 
-		while($result = $sth->fetch(PDO::FETCH_OBJ)) 
+		while($result = $sth->fetch(PDO::FETCH_OBJ)) {
+			$result->feature = $feature;
+
 			array_push($data, $result);
+		}
 
 
 		return $data;

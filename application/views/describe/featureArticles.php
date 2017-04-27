@@ -1,4 +1,4 @@
-<div class="archive_title">ಲೇಖನಗಳ ಪಟ್ಟಿ</div>
+<div class="archive_title"><?= $data[0]->feature; ?></div>
 <div class="scroll">
 	<ul>
 		<?php foreach($data as $row): ?>
