@@ -1,4 +1,4 @@
-<div class="archive_title">ಲೇಖನಗಳ ಪಟ್ಟಿ</div>
+<div class="archive_title"><?= $data[0]->authorDetails['authorname'] ?><?php if($data[0]->authorDetails['salutation'] != ''):?>, <?= $data[0]->authorDetails['salutation']; ?> <?php endif; ?> ಅವರ ಲೇಖನಗಳು</div>
 <div class="scroll">
 	<ul>
 		<?php foreach($data as $row): ?>
