@@ -38,11 +38,16 @@ class data extends Controller {
 		echo "Data Inserted<br/>";
 	}
 	
-	public function getData(){
-		
+	
+	public function getFeatureDetails(){
+
+		$getData = $this->model->getGetData();
+		unset($getData['url']);
 		$dbh = $this->model->db->connect(DB_NAME);
-		$data = $this->model->db->getLatestIssueDetails(METADATA_TABLE_L2,$dbh);
-		$this->view('flat/Home',$data);
+		$data = $this->model->db->getFeatureDetailsForCurrentIssue(METADATA_TABLE_L2,$dbh,$getData['feature']);
+
+		// var_dump($data);
+		echo json_encode($data, JSON_UNESCAPED_UNICODE);
 	}
 }
 

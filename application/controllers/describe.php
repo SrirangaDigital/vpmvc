@@ -28,6 +28,12 @@ class describe extends Controller {
 		$data = $this->model->db->getFeatureArticleList($feature);
 		($data) ? $this->view('describe/featureArticles', $data) : $this->view('error/index');
 	}
+
+	public function year($volume, $year) {
+
+		$data = $this->model->db->getYearDetails($volume, $year);
+		($data) ? $this->view('describe/year', $data) : $this->view('error/index');
+	}
 }
 
 ?>

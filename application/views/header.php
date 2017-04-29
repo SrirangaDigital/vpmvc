@@ -4,7 +4,7 @@
     <!-- Basic Page Needs
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta charset="utf-8">
-    <title><?php if($pageTitle) echo $pageTitle . ' | '; ?>ವಿವೇಕಪ್ರಭ</title>
+    <title>ವಿವೇಕಪ್ರಭ</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -19,17 +19,7 @@
     <!-- Javascript calls
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src='https://www.google.com/recaptcha/api.js'></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="<?=PUBLIC_URL?>js/jquery-1.11.0.min.js"></script>
  
-    <!-- CSS
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="stylesheet" href="<?=PUBLIC_URL?>css/normalize.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <!-- <link rel="stylesheet" href="css/skeleton.css"> -->
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?=PUBLIC_URL?>css/reset.css">
     <link rel="stylesheet" href="<?=PUBLIC_URL?>css/indexstyle1.css">
 
@@ -38,6 +28,7 @@
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/png" href="<?=PUBLIC_URL?>images/favicon.png">
+    <script type="text/javascript" src="<?=PUBLIC_URL?>js/common.js"></script>
 </head>
 <body>
 
@@ -68,7 +59,7 @@
 			</div>
 			<div id="nav">
 				<ul>
-					<li><a class="active" href="javascript:void();">ವಿವೇಕಪ್ರಭ</a></li>
+					<li><a <?php if(preg_match('/flat/', $path)):?> class = "active" <?php endif; ?> href="javascript:void();">ವಿವೇಕಪ್ರಭ</a></li>
 					<li><a href="">ಧ್ಯೇಯ </a></li>
 					<li><a href="<?=BASE_URL . "listing/volumes"?>">ಹಿಂದಿನ ಸಂಚಿಕೆಗಳು</a></li>
 				</ul>

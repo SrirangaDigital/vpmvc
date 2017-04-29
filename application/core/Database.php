@@ -162,29 +162,6 @@ class Database extends PDO {
 		return $db;
 	}
 	
-	public function getLatestIssueDetails($table,$dbh) {
-		
-		$data = array();
-		
-		$sth = $dbh->prepare('SELECT DISTINCT volume, issue FROM ' . $table .' ORDER BY volume DESC, issue DESC LIMIT 1');
-		$sth->execute();
-		$data = $sth->fetch(PDO::FETCH_ASSOC);
-		
-		
-		$features = explode("|", FEATURE);
-		foreach($features as $feature)
-		{
-			$sth = $dbh->prepare('SELECT * FROM ' . $table .' WHERE volume = ' . $data['volume'] . ' AND issue = ' . $data['issue'] . ' AND feature = \'' . $feature . '\' LIMIT 1');
-			$sth->execute();
-			
-			if($sth->rowCount() ==1)
-			$details[$feature] = $sth->fetch(PDO::FETCH_ASSOC);
-			else
-			$details[$feature] = $sth->fetchAll(PDO::FETCH_ASSOC);
-		}
-		return$details;
-	}
-	
 	public function articleDetails($articleID, $articleTable, $testOcrTable, $dbh) {
 		
 		$sth = $dbh->prepare('SELECT * FROM ' . $articleTable . ' WHERE ID = :id');
@@ -288,6 +265,41 @@ class Database extends PDO {
 		}
 
 
+		return $data;
+	}
+
+	public function getFeatureDetailsForCurrentIssue($table,$dbh,$feature='') {
+		
+		$data = array();
+		
+		$sth = $dbh->prepare('SELECT DISTINCT volume, issue FROM ' . $table .' ORDER BY volume DESC, issue DESC LIMIT 1');
+		$sth->execute();
+		$data = $sth->fetch(PDO::FETCH_ASSOC);
+		
+		
+		$sth = $dbh->prepare('SELECT * FROM ' . $table .' WHERE volume = ' . $data['volume'] . ' AND issue = ' . $data['issue'] . ' AND feature = \'' . $feature . '\'');
+			$sth->execute();
+		
+		$details = [];
+		$details = $sth->fetchAll(PDO::FETCH_ASSOC);
+		return $details;
+	}
+
+	public function getYearDetails($volume, $year){
+
+		$data = array();
+		$dbh = $this->connect(DB_NAME);
+		if(is_null($dbh))return null;
+		
+		$sth = $dbh->prepare('SELECT * FROM ' . METADATA_TABLE_L2 . ' WHERE volume = ? and year = ? ORDER BY issue ASC');
+		$sth->execute(array($volume, $year));
+		
+		while($result = $sth->fetch(PDO::FETCH_OBJ)) {
+			
+			$result->authorDetails = $this->getAuthorID($dbh, $result->authid);
+			array_push($data, $result);
+		}
+		
 		return $data;
 	}
 }
