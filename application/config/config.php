@@ -1,6 +1,6 @@
 <?php
 
-define('HOST_IP', 'http://localhost/');
+define('HOST_IP', 'http://192.168.1.12/');
 define('BASE_URL', HOST_IP . 'vpmvc/');
 define('PUBLIC_URL', BASE_URL . 'public/');
 define('VOLUMES_URL', PUBLIC_URL . 'Volumes/');
