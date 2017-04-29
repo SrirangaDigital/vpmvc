@@ -42,5 +42,11 @@
 	<?php endforeach;?>
 </ul>
 </div>
-	
+</div>
+<div class="column2">
+<script>
+		getResult('ಸಂಪಾದಕೀಯ',2);
+</script>
+</div>
+
 

@@ -4,7 +4,7 @@
     <!-- Basic Page Needs
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta charset="utf-8">
-    <title><?php if($pageTitle) echo $pageTitle . ' | '; ?>ವಿವೇಕಪ್ರಭ</title>
+    <title>ವಿವೇಕಪ್ರಭ</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -38,6 +38,7 @@
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/png" href="<?=PUBLIC_URL?>images/favicon.png">
+    <script type="text/javascript" src="<?=PUBLIC_URL?>js/common.js"></script>
 </head>
 <body>
 
@@ -68,7 +69,7 @@
 			</div>
 			<div id="nav">
 				<ul>
-					<li><a href="javascript:void();">ವಿವೇಕಪ್ರಭ</a></li>
+					<li><a href="<?= BASE_URL;?>">ವಿವೇಕಪ್ರಭ</a></li>
 					<li><a href="javascript:void();">ಧ್ಯೇಯ </a></li>
 					<li><a <?php if(preg_match('/listing\/volumes|/', $path) || preg_match('/listing\/issue|/', $path)): ?> class="active" href="javascript:void();" <?php else: ?> href="<?=BASE_URL . "listing/volumes"?>" <?php endif; ?>>ಹಿಂದಿನ ಸಂಚಿಕೆಗಳು </a></li>
 				</ul>
